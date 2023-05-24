@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import { router } from "./router";
 
 export class App{
@@ -6,6 +7,7 @@ export class App{
 
   constructor(){
     this.server = express();
+    this.server.use(cors())
     this.middleware();
     this.router();
   }
