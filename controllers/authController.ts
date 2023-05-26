@@ -22,5 +22,9 @@ class AuthController {
     const user = await User.find(req.body);
     return res.json({...user})
   }
+
+  public async register(req: Request, res: Response) {
+    // Criar função de cadastrar usuario usando mongoose model
+  }
 }
 export const authController = new AuthController();
